@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="8dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+<FrameLayout
+    android:id="@+id/frame_filesPathContainer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/iv_frameContainer_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_back_black_24dp"
+        android:layout_gravity="center_vertical"
+        />
+
+    <TextView
+        android:id="@+id/tv_frameContainer_path"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="External Storage"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:layout_marginStart="32dp"
+        android:layout_gravity="center_vertical"
+        />
+</FrameLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_frameContainer_list"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:paddingTop="4dp"
+        android:layout_marginTop="12dp"
+        android:clipToPadding="false"
+        android:layout_below="@id/frame_filesPathContainer"
+
+        />
+
+</RelativeLayout>

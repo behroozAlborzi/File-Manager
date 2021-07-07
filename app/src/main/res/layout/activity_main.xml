@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <include layout="@layout/layout_toolbar_app"/>
+        <EditText
+            android:id="@+id/et_fileManager_searchBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_et_search"
+            android:paddingTop="8dp"
+            android:paddingEnd="12dp"
+            android:paddingStart="12dp"
+            android:paddingBottom="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:drawableStart="@drawable/ic_search_gray_24dp"
+            android:hint="search something..."
+            android:drawablePadding="10dp"
+            />
+    </com.google.android.material.appbar.AppBarLayout>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+    android:background="#F8F8F8"
+    >
+
+
+
+    <com.google.android.material.button.MaterialButtonToggleGroup
+        android:id="@+id/toggleGroup_fileManager"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        app:selectionRequired="true"
+        android:layout_centerHorizontal="true"
+        android:paddingTop="15dp"
+        app:singleSelection="true"
+        app:checkedButton="@id/btn_list_horizontal"
+        >
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_list_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/IconOnlyButton"
+            app:icon="@drawable/ic_list_black_24dp"
+            app:cornerRadius="6dp"
+            />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_list_grid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/IconOnlyButton"
+            app:icon="@drawable/ic_grid_black_24dp"
+            app:cornerRadius="6dp"
+            />
+
+    </com.google.android.material.button.MaterialButtonToggleGroup>
+
+    <FrameLayout
+        android:id="@+id/frame_fileManager_frameContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toggleGroup_fileManager"
+        android:padding="8dp"
+        android:layout_marginTop="22dp"
+
+        />
+
+</RelativeLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
